@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Windows10家庭版开启Hyper-V虚拟机教程 | 记录本</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="shortcut icon" href="https://github.com/AllGetHub/allgithub.git/favicon.ico">
+<link rel="stylesheet" href="https://github.com/AllGetHub/allgithub.git/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://github.com/AllGetHub/allgithub.git">
+        <img src="https://github.com/AllGetHub/allgithub.git/images/avatar.png" class="site-logo">
+        <h1 class="site-title">记录本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by Hve Notes
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Windows10家庭版开启Hyper-V虚拟机教程</h2>
+            <div class="post-date">2021-04-03</div>
+            
+              <div class="feature-container" style="background-image: url('https://tu-goss.matrix.jdcloud.com/creative/vcg/1600/134257501.jpg!s600')">
+              </div>
+            
+            <div class="post-content">
+              <p>教程核心内容来源于网络</p>
+<!-- more -->
+<p>1.打开任意一个文件夹，新建文本文档，并打开编辑。<br>
+2.复制下方代码，粘贴到文档后保存并关闭文档。</p>
+<!-- more -->
+<pre><code>pushd &quot;%~dp0&quot;
+
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt
+
+for /f %%i in ('findstr /i . hyper-v.txt 2^&gt;nul') do dism /online /norestart /add-package:&quot;%SystemRoot%\servicing\Packages\%%i&quot;
+
+del hyper-v.txt
+
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+
+</code></pre>
+<!-- more -->
+<p>3.选中文本文档，右键→重命名，更改文件名为“开启Hyper-V”，更改文件后缀“.txt”为“.cmd”，确认更改后缀。🚩<br>
+4.文件图标自动变化，选中文件，右键→管理员身份打开，等待执行完毕。<br>
+5.重启电脑。<br>
+6.在开始菜单搜索“Hyper-V”可查找到图标。</p>
+<!-- more -->
+<p>🚩重命名时没有“.txt”可更改，或更改后图标不自动变化，可以查看<a href="/post/kuo-zhan-ming/">《Windows10显示文件扩展名》</a>设置</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://github.com/AllGetHub/allgithub.git/tag/181h2GaXR/" class="tag">
+                    Bat批处理
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://github.com/AllGetHub/allgithub.git/post/hello-hve-notes/">
+                  <h3 class="post-title">
+                    Hello Hve Notes
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

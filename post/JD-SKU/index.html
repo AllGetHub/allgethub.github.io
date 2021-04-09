@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>京东pop店铺SPU与SKU | 记录本</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="shortcut icon" href="https://github.com/AllGetHub/allgithub.git/favicon.ico">
+<link rel="stylesheet" href="https://github.com/AllGetHub/allgithub.git/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://github.com/AllGetHub/allgithub.git">
+        <img src="https://github.com/AllGetHub/allgithub.git/images/avatar.png" class="site-logo">
+        <h1 class="site-title">记录本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by Hve Notes
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">京东pop店铺SPU与SKU</h2>
+            <div class="post-date">2021-04-09</div>
+            
+              <div class="feature-container" style="background-image: url('https://img1.360buyimg.com/da/jfs/t1/32242/29/6726/178849/5c90a514E09eab8cd/e7b584b45b8aa477.gif?v=0.5209341732519592')">
+              </div>
+            
+            <div class="post-content">
+              <h2 id="定义">定义</h2>
+<ul>
+<li>SPU：产品编号，定义一款产品，包含因尺寸颜色等不同产生的同一款产品的全部不同型号</li>
+<li>SKU：产品编号，定义为一款商品中特定颜色尺寸等属性的一个型号，是商品的最小粒度</li>
+</ul>
+<h2 id="关系">关系</h2>
+<p>店铺下有多个类目，类目下有多个品牌，品牌下有多个产品（SPU粒度），产品下多个型号（SKU粒度）</p>
+<h2 id="京东spu和sku的绑定">京东SPU和SKU的绑定</h2>
+<ul>
+<li>自动绑定</li>
+<li>SPU名下可以有超过24x30=720个SKU可用，但是同一时间SPU名下只能有不超过5x20=100个SKU</li>
+<li>SKU由颜色规格两个属性决定，每一个交叉点就是一个SKU，新SPU的SKU是连续分配的，顺序一般为属性交叉点左到右上到下，这是一个矩形空间，评价在这个SPU名下已有SKU组建的矩形空间内每一个交叉点共享。</li>
+<li>可以认为SPU是这个初始矩形空间的编号。</li>
+<li>商详可以绑定不同SPU，评价共享在整个SPU上，SKU在SPU容量上限内随意扩增、变换。</li>
+</ul>
+<h2 id="新增sku会带来哪一些变化">新增SKU会带来哪一些变化</h2>
+<table>
+<thead>
+<tr>
+<th>SKU属性</th>
+<th>变化</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>没有属性的SKU（0x0 0x1 1x1）</td>
+<td>新建一个SKU矩形</td>
+<td>SKU和SPU重新生成</td>
+</tr>
+<tr>
+<td>单属性多SKU（1xN 0xN）</td>
+<td>扩展矩形容量（1xN+n 0xN+n）</td>
+<td>新增SKU生成新编号并添加到扩容的SPU空间里</td>
+</tr>
+<tr>
+<td>单属性多SKU（1xN 0xN）</td>
+<td>新增矩形+（2xn 2xM 0xM ）</td>
+<td>变化后SKU空间与旧SKU空间有交叠，SKU重新生成</td>
+</tr>
+<tr>
+<td>单属性多SKU（1xN 0xN）</td>
+<td>变更矩形（2xn 2xM 0xM ）</td>
+<td>变更后SKU空间与旧SKU空间无交叠，SKU，SPU重新生成</td>
+</tr>
+<tr>
+<td>多属性多SKU（AxB）</td>
+<td>变换矩形（CxD）</td>
+<td>变更后SKU空间与旧SKU空间无交叠，SKU，SPU重新生成</td>
+</tr>
+<tr>
+<td>多属性多SKU（AxB）</td>
+<td>变换矩形（CxD）</td>
+<td>变更后SKU空间与旧SKU空间有交叠，SKU，生成新增部分</td>
+</tr>
+</tbody>
+</table>
+<figure data-type="image" tabindex="1"><img src="https://github.com/AllGetHub/allgithub.git/post-images/1617940846271.png" alt="" loading="lazy"></figure>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://github.com/AllGetHub/allgithub.git/tag/cKAjA5COL/" class="tag">
+                    JD电商
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://github.com/AllGetHub/allgithub.git/post/N7wNOgfsc/">
+                  <h3 class="post-title">
+                    DeepinOS+Windows10双系统安装
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

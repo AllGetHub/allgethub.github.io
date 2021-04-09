@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>USB引导-Ventoy引导盘制作-Windows环境 | 记录本</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="shortcut icon" href="https://github.com/AllGetHub/allgithub.git/favicon.ico">
+<link rel="stylesheet" href="https://github.com/AllGetHub/allgithub.git/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://github.com/AllGetHub/allgithub.git">
+        <img src="https://github.com/AllGetHub/allgithub.git/images/avatar.png" class="site-logo">
+        <h1 class="site-title">记录本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by Hve Notes
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">USB引导-Ventoy引导盘制作-Windows环境</h2>
+            <div class="post-date">2021-04-03</div>
+            
+              <div class="feature-container" style="background-image: url('https://www.ventoy.net/static/img/screen/screen_bios2.png')">
+              </div>
+            
+            <div class="post-content">
+              <h2 id="ventoy引导是目前使用的usb引导中比较完美的一款其实用有点如下">Ventoy引导是目前使用的USB引导中比较完美的一款，其实用有点如下：</h2>
+<ul>
+<li>能够实现传统BIOS兼容模式和UEFI的引导，有限支持安全引导Safety Boot，新老机型兼容性强。</li>
+<li>引导分区占用U盘空间极小大约50M以内，不影响U盘容量利用。</li>
+<li>可以引导启动主流系统的ISO镜像文件，官方已经测试超过100+，且支持从U盘引导硬盘系统。</li>
+<li>更换系统镜像不需要烧录，拖入U盘即可使用，可以实现一枚U盘多个安装镜像，实现一个U盘可以进PE维护系统，可以使用官方镜像原生安装Windows，可以引导Linux系统镜像或liveCD，并支持Linux的liveCD保存数据。</li>
+<li>支持主流系统的自动化安装部署</li>
+</ul>
+<h2 id="ventoy下载与安装windows10制作流程">Ventoy下载与安装（Windows10制作流程）</h2>
+<ol>
+<li>官方网站下载Ventoy安装包，根据需要下载Windows/Linux/liveCD安装包，这里下载Windows版本，文件名ventoy-1.0.39-windows.zip<pre><code>https://www.ventoy.net/cn/index.html
+</code></pre>
+</li>
+<li>将即将制作启动潘德U盘插入电脑，将U盘内原有文件复制到电脑后格式化U盘。将电脑上无关U盘，移动硬盘等移动存储设备移除。</li>
+<li>解压下载好的压缩包文件到任意目录，打开“Ventoy2Disk.exe”文件</li>
+<li>选择目标安装U盘，点击安装注意提示内容，确认选对设备，且U盘内文件已经备份，点击是。</li>
+<li>等待进度完成，U盘名字被更改为“Ventoy”，且U盘为空时，Ventoy引导已经安装到U盘。</li>
+</ol>
+<h2 id="为ventoy搭配iso镜像文件">为Ventoy搭配ISO镜像文件</h2>
+<ul>
+<li>在U盘根目录复制Windows安装镜像，WinPE镜像文件，万能网卡驱动安装包。即可应对大部分Windows系统故障和重装需求。</li>
+<li>在U盘根目录复制Linux发行版安装镜像，liveCD，可以应对常见的Linux系统维护需求。</li>
+<li>安装deepinOS和Windows10双系统的U盘目录如下：
+<table>
+<thead>
+<tr>
+<th>文件/文件夹</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Win10PE X64_Net.iso</td>
+<td>用于Windows系统维护和安装前文件救援</td>
+</tr>
+<tr>
+<td>Windows10-1909x64.iso</td>
+<td>原生安装Windows10的2019年9月x64版本</td>
+</tr>
+<tr>
+<td>Windows10-2004x64.iso</td>
+<td>原生安装Windows10的2020年4月x64版本</td>
+</tr>
+<tr>
+<td>deepin-desktop-1010-amd64.iso</td>
+<td>安装DeepinOS的64位桌面版</td>
+</tr>
+<tr>
+<td>deepin-live-system-2.0-amd64.iso</td>
+<td>用于Linux系统维护和安装前文件救援</td>
+</tr>
+<tr>
+<td>PETOOLS</td>
+<td>PE系统拓展程序目录</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="相关文章">相关文章</h2>
+<ul>
+<li>*<a href="post/windows10xiazai/">《Windows10官方镜像下载》</a></li>
+<li>*<a href="">《DeepinOS官方镜像下载》</a></li>
+<li>*<a href="">《Windows10+DeepinOSv20双系统安装教程》</a></li>
+</ul>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://github.com/AllGetHub/allgithub.git/post/kuo-zhan-ming/">
+                  <h3 class="post-title">
+                    显示Windows系统文件扩展名
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
