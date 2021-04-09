@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/AllGetHub/allgithub.git</id>
+    <id>https://allgithub.git</id>
     <title>记录本</title>
-    <updated>2021-04-09T05:40:19.562Z</updated>
+    <updated>2021-04-09T05:52:26.512Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://github.com/AllGetHub/allgithub.git"/>
-    <link rel="self" href="https://github.com/AllGetHub/allgithub.git/atom.xml"/>
+    <link rel="alternate" href="https://allgithub.git"/>
+    <link rel="self" href="https://allgithub.git/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://github.com/AllGetHub/allgithub.git/images/avatar.png</logo>
-    <icon>https://github.com/AllGetHub/allgithub.git/favicon.ico</icon>
+    <logo>https://allgithub.git/images/avatar.png</logo>
+    <icon>https://allgithub.git/favicon.ico</icon>
     <rights>All rights reserved 2021, 记录本</rights>
     <entry>
         <title type="html"><![CDATA[京东pop店铺SPU与SKU]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/JD-SKU/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/JD-SKU/">
+        <id>https://allgithub.git/post/JD-SKU/</id>
+        <link href="https://allgithub.git/post/JD-SKU/">
         </link>
         <updated>2021-04-09T02:47:41.000Z</updated>
         <content type="html"><![CDATA[<h2 id="定义">定义</h2>
@@ -73,13 +73,13 @@
 </tr>
 </tbody>
 </table>
-<figure data-type="image" tabindex="1"><img src="https://github.com/AllGetHub/allgithub.git/post-images/1617940846271.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://allgithub.git/post-images/1617940846271.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[DeepinOS+Windows10双系统安装]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/N7wNOgfsc/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/N7wNOgfsc/">
+        <id>https://allgithub.git/post/N7wNOgfsc/</id>
+        <link href="https://allgithub.git/post/N7wNOgfsc/">
         </link>
         <updated>2021-04-07T10:35:52.000Z</updated>
         <content type="html"><![CDATA[<p>数据无价，重要数据及时备份，请不要在主力电脑上实验安装过程。</p>
@@ -90,7 +90,7 @@
 </ul>
 <h2 id="安装过程deepinos安装空间30g为例">安装过程（DeepinOS安装空间30G为例）</h2>
 <ol>
-<li>Windows系统下调整分区，在硬盘尾部或者其他位置划分出30G未分配空间，结果如下：<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617792172644.jpg" alt="" loading="lazy"></li>
+<li>Windows系统下调整分区，在硬盘尾部或者其他位置划分出30G未分配空间，结果如下：<img src="https://allgithub.git/post-images/1617792172644.jpg" alt="" loading="lazy"></li>
 <li>确认Windows下重要文件已经备份，关闭Windows，再次开机进入BIOS设置页面，关闭安全启动 (Secure Boot)，调整启动顺序为USB为第一启动项</li>
 <li>DeepinOS安装启动后，使用默认设置，到选择安装位置时选择“自定义”，在分区列表中找到硬盘中30G未分配的空间，选中新建并选择设置为“/”目录，后续使用默设置继续安装等待你装完逼</li>
 </ol>
@@ -98,8 +98,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[软碟通制作启动盘]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/UltraISO/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/UltraISO/">
+        <id>https://allgithub.git/post/UltraISO/</id>
+        <link href="https://allgithub.git/post/UltraISO/">
         </link>
         <updated>2021-04-07T07:33:53.000Z</updated>
         <content type="html"><![CDATA[<p>数据无价，谨慎操作。格式化前请留意数据备份。</p>
@@ -118,9 +118,9 @@
 </ul>
 <h2 id="制作过程刻录deepinos-livecd为例">制作过程（刻录DeepinOS liveCD为例）</h2>
 <ol>
-<li>启动运行软碟通UltraISO，菜单栏“文件”→“打开”，选中将要制作的ISO镜像文件，结果如下：<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617781693969.jpg" alt="" loading="lazy"></li>
+<li>启动运行软碟通UltraISO，菜单栏“文件”→“打开”，选中将要制作的ISO镜像文件，结果如下：<img src="https://allgithub.git/post-images/1617781693969.jpg" alt="" loading="lazy"></li>
 <li>插入准备好的U盘，拔下其他USB存储器，</li>
-<li>菜单栏“启动”→“写入硬盘镜像”，在新界面操作，选定准备好的U盘，点击下方“格式化”按钮，在格式化界面下核对U盘容量和卷标，无误后开始格式化，在“隐藏起点分区”选择“高端隐藏”，操作结果如下：<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617787472327.png" alt="" loading="lazy"></li>
+<li>菜单栏“启动”→“写入硬盘镜像”，在新界面操作，选定准备好的U盘，点击下方“格式化”按钮，在格式化界面下核对U盘容量和卷标，无误后开始格式化，在“隐藏起点分区”选择“高端隐藏”，操作结果如下：<img src="https://allgithub.git/post-images/1617787472327.png" alt="" loading="lazy"></li>
 <li>点击“写入”按钮后并在提示中确认后，制作过程开始，不可终端，U盘内数据会清空，请谨慎操作。制作过程进度结束后，启动盘制作完成。</li>
 </ol>
 <h2 id="其他u盘启动盘制作方式">其他U盘启动盘制作方式</h2>
@@ -132,8 +132,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[DeepinOS官方镜像下载与使用]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/9PEp1tUDN/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/9PEp1tUDN/">
+        <id>https://allgithub.git/post/9PEp1tUDN/</id>
+        <link href="https://allgithub.git/post/9PEp1tUDN/">
         </link>
         <updated>2021-04-07T06:28:56.000Z</updated>
         <content type="html"><![CDATA[<h2 id="所需材料材料">所需材料材料</h2>
@@ -144,7 +144,7 @@
 <h2 id="下载路径">下载路径</h2>
 <ul>
 <li>官方网站：<a href="https://www.deepin.org/zh/">https://www.deepin.org/zh/</a></li>
-<li>下载页面：<a href="https://github.com/AllGetHub/allgithub.git/post-images/1617777218666.jpg">https://www.deepin.org/zh/download/</a></li>
+<li>下载页面：<a href="https://allgithub.git/post-images/1617777218666.jpg">https://www.deepin.org/zh/download/</a></li>
 <li>试用和维护工具  Deepin-liveCD.ISO 下载地址：<a href="http://cdimage.deepin.com/live-system/deepin-live-system-2.0-amd64.iso">http://cdimage.deepin.com/live-system/deepin-live-system-2.0-amd64.iso</a></li>
 <li>安装镜像下载地址：DeepinOS-20.2-amd64</li>
 </ul>
@@ -175,7 +175,7 @@
 <li>官方工具制作USB启动盘：
 <ol>
 <li>Windows10下打开下载的 DeepinOS-xxxx-xxxx.iso文件</li>
-<li>打开“DEEPIN_B.EXE”选择下载的 DeepinOS-xxxx-xxxx.iso文件，如图“下一步”<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617779140735.jpg" alt="" loading="lazy"></li>
+<li>打开“DEEPIN_B.EXE”选择下载的 DeepinOS-xxxx-xxxx.iso文件，如图“下一步”<img src="https://allgithub.git/post-images/1617779140735.jpg" alt="" loading="lazy"></li>
 <li>插入准备好的U盘，拔下其他USB存储器，选定准备好的U盘，勾选“格式化U盘”，点击“开始制作”等待进度条完成，工具提示U盘制作成功，点击&quot;完成&quot;，获得Deepin启动镜像U盘，可直接用于DeepinOS安装使用。</li>
 </ol>
 </li>
@@ -186,8 +186,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[QQ机器人框架]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/b5B73Na9c/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/b5B73Na9c/">
+        <id>https://allgithub.git/post/b5B73Na9c/</id>
+        <link href="https://allgithub.git/post/b5B73Na9c/">
         </link>
         <updated>2021-04-07T01:26:31.000Z</updated>
         <content type="html"><![CDATA[<h2 id="项目论坛地址">项目论坛地址</h2>
@@ -203,8 +203,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Windows10最新版本官方安装镜像下载和启动盘制作]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/windows10xiazai/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/windows10xiazai/">
+        <id>https://allgithub.git/post/windows10xiazai/</id>
+        <link href="https://allgithub.git/post/windows10xiazai/">
         </link>
         <updated>2021-04-06T12:11:09.000Z</updated>
         <content type="html"><![CDATA[<h2 id="材料">材料</h2>
@@ -215,18 +215,18 @@
 <h2 id="软件材料准备与制作过程">软件材料准备与制作过程</h2>
 <h4 id="获取windows官方下载器">获取Windows官方下载器</h4>
 <ol>
-<li>打开百度搜索，关键词“Windows10下载”。结果如下，便是官方下载链接点击进入<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617711587794.jpg" alt="" loading="lazy"></li>
-<li>官方下载页面如下：Windows官方公司名称为Microsoft，logo为田字形四色方框，蓝色(https://github.com/AllGetHub/allgithub.git/post-images/1617712687016.jpg)</li>
-<li>向下翻页，找到下载按钮：“立即下载工具”点击下载。<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617712780255.jpg" alt="" loading="lazy"></li>
+<li>打开百度搜索，关键词“Windows10下载”。结果如下，便是官方下载链接点击进入<img src="https://allgithub.git/post-images/1617711587794.jpg" alt="" loading="lazy"></li>
+<li>官方下载页面如下：Windows官方公司名称为Microsoft，logo为田字形四色方框，蓝色(https://allgithub.git/post-images/1617712687016.jpg)</li>
+<li>向下翻页，找到下载按钮：“立即下载工具”点击下载。<img src="https://allgithub.git/post-images/1617712780255.jpg" alt="" loading="lazy"></li>
 <li>等待下载过程中请阅读下方关于官方工具的使用说明。</li>
-<li>下载的官方下载工具属性中详细信息如下：<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617713169141.jpg" alt="" loading="lazy"></li>
+<li>下载的官方下载工具属性中详细信息如下：<img src="https://allgithub.git/post-images/1617713169141.jpg" alt="" loading="lazy"></li>
 </ol>
 <h4 id="使用官方下载器下载和制作usb启动镜像">使用官方下载器下载和制作USB启动镜像</h4>
 <ol>
-<li>打开下载好的官方下载工具：MediaCreationTool20H2.exe<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617713455178.jpg" alt="" loading="lazy"></li>
-<li>等待工具准备就绪会跳出许可条款，只能点击“接受”，拒绝下载器将会自动退出。<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617713460022.jpg" alt="" loading="lazy"></li>
-<li>等待工具响应，选择“为另一台电脑创建安装介质(https://github.com/AllGetHub/allgithub.git/post-images/1617713776097.jpg)</li>
-<li>“选择语言、体系结构和版本”页面使用默认选项，直接点击下一步。<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617713906392.jpg" alt="" loading="lazy"></li>
+<li>打开下载好的官方下载工具：MediaCreationTool20H2.exe<img src="https://allgithub.git/post-images/1617713455178.jpg" alt="" loading="lazy"></li>
+<li>等待工具准备就绪会跳出许可条款，只能点击“接受”，拒绝下载器将会自动退出。<img src="https://allgithub.git/post-images/1617713460022.jpg" alt="" loading="lazy"></li>
+<li>等待工具响应，选择“为另一台电脑创建安装介质(https://allgithub.git/post-images/1617713776097.jpg)</li>
+<li>“选择语言、体系结构和版本”页面使用默认选项，直接点击下一步。<img src="https://allgithub.git/post-images/1617713906392.jpg" alt="" loading="lazy"></li>
 <li>
 <ul>
 <li>插入准备好的U盘，拔下其他USB存储器，选择要使用的介质为U盘，选定准备好的U盘，进入下一步等待进度条完成，工具提示U盘制作成功，点击&quot;完成&quot;，获得Windows启动镜像U盘，可直接用于系统重装。</li>
@@ -243,8 +243,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[USB引导-Ventoy引导盘制作-Windows环境]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/Ventoy-Win/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/Ventoy-Win/">
+        <id>https://allgithub.git/post/Ventoy-Win/</id>
+        <link href="https://allgithub.git/post/Ventoy-Win/">
         </link>
         <updated>2021-04-03T11:13:41.000Z</updated>
         <content type="html"><![CDATA[<h2 id="ventoy引导是目前使用的usb引导中比较完美的一款其实用有点如下">Ventoy引导是目前使用的USB引导中比较完美的一款，其实用有点如下：</h2>
@@ -316,14 +316,14 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[显示Windows系统文件扩展名]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/kuo-zhan-ming/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/kuo-zhan-ming/">
+        <id>https://allgithub.git/post/kuo-zhan-ming/</id>
+        <link href="https://allgithub.git/post/kuo-zhan-ming/">
         </link>
         <updated>2021-04-03T10:41:32.000Z</updated>
         <content type="html"><![CDATA[<ol>
 <li>打开任意一个文件夹，在标题栏下 菜单栏内点击“查看”，打开设置查看选项</li>
 <li>将查看选项中的“文件扩展名”前方的选框勾选，如下图状态，设置完毕。<br>
-<img src="https://github.com/AllGetHub/allgithub.git/post-images/1617447667784.jpg" alt="" loading="lazy"></li>
+<img src="https://allgithub.git/post-images/1617447667784.jpg" alt="" loading="lazy"></li>
 <li>文件夹中文件名显示会长生如下变化：</li>
 </ol>
 <pre><code>文件名从“ventoy”变化为“ ventoy.json”
@@ -333,8 +333,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Windows10家庭版开启Hyper-V虚拟机教程]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/windows10-hyper-v-01/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/windows10-hyper-v-01/">
+        <id>https://allgithub.git/post/windows10-hyper-v-01/</id>
+        <link href="https://allgithub.git/post/windows10-hyper-v-01/">
         </link>
         <updated>2021-04-03T07:33:23.000Z</updated>
         <summary type="html"><![CDATA[<p>教程核心内容来源于网络</p>
@@ -366,8 +366,8 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Hve Notes]]></title>
-        <id>https://github.com/AllGetHub/allgithub.git/post/hello-hve-notes/</id>
-        <link href="https://github.com/AllGetHub/allgithub.git/post/hello-hve-notes/">
+        <id>https://allgithub.git/post/hello-hve-notes/</id>
+        <link href="https://allgithub.git/post/hello-hve-notes/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Hve Notes</strong> ！</p>
