@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://allgethub.github.io</id>
     <title>记录本</title>
-    <updated>2021-04-09T07:25:14.312Z</updated>
+    <updated>2021-04-09T08:56:31.191Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://allgethub.github.io"/>
     <link rel="self" href="https://allgethub.github.io/atom.xml"/>
@@ -26,7 +26,7 @@
 <ol>
 <li>Windows系统下调整分区，在硬盘尾部或者其他位置划分出30G未分配空间，结果如下：<img src="https://allgethub.github.io/post-images/1617792172644.jpg" alt="" loading="lazy"></li>
 <li>确认Windows下重要文件已经备份，关闭Windows，再次开机进入BIOS设置页面，关闭安全启动 (Secure Boot)，调整启动顺序为USB为第一启动项</li>
-<li>DeepinOS安装启动后，使用默认设置，到选择安装位置时选择“自定义”，在分区列表中找到硬盘中30G未分配的空间，选中新建并选择设置为“/”目录，后续使用默设置继续安装等待你装完逼</li>
+<li>DeepinOS安装启动后，使用默认设置，到选择安装位置时选择“自定义”，在分区列表中找到硬盘中30G未分配的空间，选中新建并选择设置为“/”目录，后续使用默设置继续安装，等待安装完毕。</li>
 </ol>
 ]]></content>
     </entry>
@@ -59,8 +59,8 @@
 </ol>
 <h2 id="其他u盘启动盘制作方式">其他U盘启动盘制作方式</h2>
 <ul>
-<li><a href="post/Ventoy-Win/">《USB引导-Ventoy引导盘制作-Windows环境》</a></li>
-<li><a href="post/Ventoy-Deepin/">《Linux下制作Ventoy引导盘》</a></li>
+<li><a href="/post/Ventoy-Win/">《USB引导-Ventoy引导盘制作-Windows环境》</a></li>
+<li><a href="/post/Ventoy-Linux/">《Linux下制作Ventoy引导盘》</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -113,8 +113,8 @@
 <li>插入准备好的U盘，拔下其他USB存储器，选定准备好的U盘，勾选“格式化U盘”，点击“开始制作”等待进度条完成，工具提示U盘制作成功，点击&quot;完成&quot;，获得Deepin启动镜像U盘，可直接用于DeepinOS安装使用。</li>
 </ol>
 </li>
-<li>第三方工具<a href="https://cn.ultraiso.net/">软碟通UltraISO</a>刻录ISO镜像<a href="">【制作启动U盘】</a></li>
-<li><a href="post/Ventoy/">使用第三方工具Ventoy引导ISO镜像文件</a></li>
+<li>第三方工具<a href="https://cn.ultraiso.net/">软碟通UltraISO</a>刻录ISO镜像<a href="/post/UltraISO/">【制作启动U盘】</a></li>
+<li><a href="/post/Ventoy-Win/">使用第三方工具Ventoy引导ISO镜像文件</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -170,8 +170,8 @@
 </ol>
 <h2 id="系统安装镜像文件的使用方法">系统安装镜像文件的使用方法</h2>
 <ul>
-<li><a href="">制作启动盘</a></li>
-<li><a href="post/Ventoy/">使用第三方工具Ventoy引导ISO镜像文件</a></li>
+<li><a href="/post/UltraISO/">制作启动盘</a></li>
+<li><a href="/post/Ventoy-Win/">使用第三方工具Ventoy引导ISO镜像文件</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -242,9 +242,10 @@
 </ul>
 <h2 id="相关文章">相关文章</h2>
 <ul>
-<li>*<a href="post/windows10xiazai/">《Windows10官方镜像下载》</a></li>
-<li>*<a href="">《DeepinOS官方镜像下载》</a></li>
-<li>*<a href="">《Windows10+DeepinOSv20双系统安装教程》</a></li>
+<li>*<a href="/post/windows10xiazai/">《Windows10官方镜像下载》</a></li>
+<li>*<a href="/post/9PEp1tUDN/">《DeepinOS官方镜像下载》</a></li>
+<li>*<a href="/post/N7wNOgfsc/">《Windows10+DeepinOSv20双系统安装教程》</a></li>
+<li>*<a href="/post/Ventoy-Linux">《Ventoy引导制作-Linux环境下》</a></li>
 </ul>
 ]]></content>
     </entry>
