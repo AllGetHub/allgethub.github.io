@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>安装Alpine linux | 记录本</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="shortcut icon" href="https://allgethub.github.io/favicon.ico">
+<link rel="stylesheet" href="https://allgethub.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://allgethub.github.io">
+        <img src="https://allgethub.github.io/images/avatar.png" class="site-logo">
+        <h1 class="site-title">记录本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by Hve Notes
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">安装Alpine linux</h2>
+            <div class="post-date">2021-04-12</div>
+            
+            <div class="post-content">
+              <p>Alpine Linux是一个面向安全应用的轻量级Linux发行版。它采用了musl libc和busybox以减小系统的体积和运行时资源消耗，同时还提供了自己的包管理工具apk。Alpine 的内核都打了grsecurity/PaX补丁，并且所有的程序都编译为Position Independent Executables (PIE) 以增强系统的安全性。<br>
+最小安装仅需要1G存储和128M内存。<br>
+安装过程以hyper-v虚拟机环境开始操作。第一代、512M内存、4G硬盘、网络、ISO镜像文件启动</p>
+<h2 id="下载iso">下载ISO</h2>
+<p>打开官网<a href="https://alpinelinux.org/downloads/">https://alpinelinux.org/downloads/</a>选择合适的版本下载，这里我选择x86_64镜像</p>
+<h2 id="开始安装">开始安装</h2>
+<ol>
+<li>Alpine linux使用ISO镜像启动后等待系统加载完毕，显示输出最后为<br>
+<code>localhost login：</code><br>
+则Alpine linux已经启动完毕，系统加载在内存，正在等待登录。不管是刻录U盘还是在虚拟机里启动，进入终端之后，输入root默认无密登陆，然后执行&quot;setup-alpine&quot;命令，在终端上启动他的安装程序。</li>
+<li>显示输出“Select keyboard layout [none]:”的时候，设置键盘布局，输入“cn”回车</li>
+<li>后面的配置选项，&quot;hostname&quot;、&quot;网卡配置&quot;、&quot;IP地址配置&quot;、&quot;配置dns&quot;等一系列选择默认即可，有需要的可以根据实际情况修改。</li>
+<li>显示输出“New password：”时，设置输入密码，并重复输入确认，输入过程不显示，请牢记密码，后续开机使用root+密码登录。</li>
+<li>显示输出包含“[UTC]”的时候，设置时间和时区，依次输入“Asia”“Shanghai”回车。</li>
+<li>联网状态下这一步会输出一些网址（软件源）供选择，此时输入“f”回车，会自动测试软件源速度选择最优项。这个过程会花费一些时间，请耐心等待。</li>
+<li>显示输出包含“SSH server”的时候，设置SSH服务，使用默认选项或者根据自身需求选择。下一步为“NTP”使用默认设置。</li>
+<li>格式化并安装到硬盘
+<ul>
+<li>显示输出“Availabe disks are：”和“Which disks would you like to use?”会列出可用磁盘信息，磁盘名称（sda sdb sdc........）和容量信息。</li>
+<li>输入磁盘名，这里只有一块银硬盘“sda”，输入“sda”回车等待下一步信息</li>
+<li>显示输出“How would you like to use it?(sys date lvm)”选择对应模式安装。<br>
+- sys是全量安装，系统会安装在硬盘上并可以启动，可以脱离安装镜像独立运行。<br>
+- data 是有限安装，系统将本地磁盘设置为数据存储区，系统加载运行在内存，不可脱离安装镜像独立运行。</li>
+</ul>
+</li>
+<li>显示输出“Installation is complete. Please reboot”时候，安装完成，输入命令“reboot”重启系统。</li>
+</ol>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://allgethub.github.io/post/qdGMfzpRU/">
+                  <h3 class="post-title">
+                    硬盘分区表和分区格式
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
