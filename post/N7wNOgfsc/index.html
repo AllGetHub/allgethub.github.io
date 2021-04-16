@@ -95,6 +95,14 @@
 <li>确认Windows下重要文件已经备份，关闭Windows，再次开机进入BIOS设置页面，关闭安全启动 (Secure Boot)，调整启动顺序为USB为第一启动项</li>
 <li>DeepinOS安装启动后，使用默认设置，到选择安装位置时选择“自定义”，在分区列表中找到硬盘中30G未分配的空间，选中新建并选择设置为“/”目录，后续使用默设置继续安装，等待安装完毕。</li>
 </ol>
+<h2 id="安装结果uefigpt模式-windows只有c盘">安装结果（UEFI+GPT模式 Windows只有C盘）</h2>
+<pre><code>Windows系统只有C盘一个可见分区，安装前分区结构为
+- efi（100M fat32）+msr（微软保修分区或恢复分区）+Windows系统分区（ntfs）
+在这个结构上从Windows分区划分出空闲空间做前期准备，分区结构变更为
+- efi（100M fat32）+msr（微软保修分区或恢复分区）+Windows系统分区（ntfs）+空闲空间
+安装DeepinOS，空闲空间做DeepinOS系统分区，安装后系统分区变更为
+- efi（100M fat32）+msr（微软保修分区或恢复分区）+Windows系统分区（ntfs）+DeepinOS系统分区（ext4）
+- 安装完成后DeepinOS会在efi分区写入引导，并尝试引导Windows。</code></pre>
 
             </div>
             

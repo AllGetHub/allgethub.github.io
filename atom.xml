@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://allgethub.github.io</id>
     <title>记录本</title>
-    <updated>2021-04-12T09:23:32.955Z</updated>
+    <updated>2021-04-16T06:20:35.492Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://allgethub.github.io"/>
     <link rel="self" href="https://allgethub.github.io/atom.xml"/>
@@ -54,7 +54,11 @@
         <content type="html"><![CDATA[<h2 id="分区表">分区表</h2>
 <p>个人用户可以接触到的分区表一般分两种：MBR和GPT</p>
 <ul>
-<li>MBR：Windows7以前的分区表格式。使用场景为家用产品硬盘容量低于2T时候的分区标准，可管理硬盘容量最大为2T，可生成4个分区，分区类型为主分区和扩展分区两个大类，一个扩展分区下可以分3个逻辑分区。单个系统硬盘的MBR分区表分区个数上限为10个：1个主分区和3个扩展分区下的9个逻辑分区。</li>
+<li>MBR：Windows7以前的分区表格式。使用场景为家用产品硬盘容量低于2T时候的分区标准，可管理硬盘容量最大为2T，可生成4个分区，分区类型为主分区和扩展分区两个大类，一个扩展分区下可以分3个逻辑分区。
+<ul>
+<li>单个系统硬盘的MBR分区表分区个数上限为10个：1个主分区和3个扩展分区下的9个逻辑分区。</li>
+</ul>
+</li>
 <li></li>
 </ul>
 ]]></content>
@@ -77,6 +81,14 @@
 <li>确认Windows下重要文件已经备份，关闭Windows，再次开机进入BIOS设置页面，关闭安全启动 (Secure Boot)，调整启动顺序为USB为第一启动项</li>
 <li>DeepinOS安装启动后，使用默认设置，到选择安装位置时选择“自定义”，在分区列表中找到硬盘中30G未分配的空间，选中新建并选择设置为“/”目录，后续使用默设置继续安装，等待安装完毕。</li>
 </ol>
+<h2 id="安装结果uefigpt模式-windows只有c盘">安装结果（UEFI+GPT模式 Windows只有C盘）</h2>
+<pre><code>Windows系统只有C盘一个可见分区，安装前分区结构为
+- efi（100M fat32）+msr（微软保修分区或恢复分区）+Windows系统分区（ntfs）
+在这个结构上从Windows分区划分出空闲空间做前期准备，分区结构变更为
+- efi（100M fat32）+msr（微软保修分区或恢复分区）+Windows系统分区（ntfs）+空闲空间
+安装DeepinOS，空闲空间做DeepinOS系统分区，安装后系统分区变更为
+- efi（100M fat32）+msr（微软保修分区或恢复分区）+Windows系统分区（ntfs）+DeepinOS系统分区（ext4）
+- 安装完成后DeepinOS会在efi分区写入引导，并尝试引导Windows。</code></pre>
 ]]></content>
     </entry>
     <entry>
