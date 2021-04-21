@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://allgethub.github.io</id>
     <title>记录本</title>
-    <updated>2021-04-18T11:06:36.271Z</updated>
+    <updated>2021-04-21T09:16:30.624Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://allgethub.github.io"/>
     <link rel="self" href="https://allgethub.github.io/atom.xml"/>
@@ -59,7 +59,23 @@
 <li>单个系统硬盘的MBR分区表分区个数上限为10个：1个主分区和3个扩展分区下的9个逻辑分区。</li>
 </ul>
 </li>
-<li></li>
+<li>GPT：适用于新操作系统的分区表格式，突破MBR容量2T限制和分区数量限制，单个磁盘分区表可容纳分区数量上限和整体容量上限在家用产品上目前还没有触顶的可能，GPT和MBR分区表可互转，有较小数据丢失风险，目前转换限制为MBR转GPT前需要将MBR分区前后各调整分区容量缩减出个10左右空间用于生成GPT表的相关数据扇区
+<ul>
+<li>用于系统安装的GPT分区表至少包含一个位于头部的fat32格式的分区和一个主分区</li>
+<li>避免无法识别GPT的系统误操作，数据盘仍建议在头部安排一个fat32分区，大小不限。</li>
+</ul>
+</li>
+</ul>
+<h2 id="适用性与兼容性">适用性与兼容性</h2>
+<ul>
+<li>Windows7作为分水岭MBR和GPT都可兼容，兼容性相对好。
+<ul>
+<li>Windows系统中Windows7之前的版本可以通过驱动等手段识别或者读取GPT分区，但是系统无法安装在GPT分区表的硬盘上，系统引导几乎不能兼容</li>
+<li>Windows8及以后的版本默认安装模式一般为UEFI引导+GPT硬盘分区表，能够自动兼容MBR分区表，系统和引导支持在MBR分区表安装、启动，MBR模式下部分新特性无法被支持，运行在兼容模式，MBR分区表硬盘上的引导和系统必须在主分区</li>
+<li>双系统可以在MBR分区表硬盘安装成功，各个系统会陷入分区数量短缺的状况。</li>
+</ul>
+</li>
+<li>Linux各发行版对GPT的支持日趋完善，比较新的版本不必纠结阴干分区表类型，较新版本的Linux一般默认在GPT进行全新安装，受Linux特性影响MBR分区表在Linux中使用没有什么大问题，对Windows8及以后的新版本Windows，安装在MBR分区表的硬盘上并无太多差别。</li>
 </ul>
 ]]></content>
     </entry>
