@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://allgethub.github.io</id>
     <title>记录本</title>
-    <updated>2021-04-21T09:16:30.624Z</updated>
+    <updated>2021-04-21T09:17:43.155Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://allgethub.github.io"/>
     <link rel="self" href="https://allgethub.github.io/atom.xml"/>
@@ -295,15 +295,15 @@
 </tr>
 <tr>
 <td>Windows10-1909x64.iso</td>
-<td>原生安装Windows10的2019年9月x64版本</td>
+<td>用于原生安装Windows10的2019年9月x64版本</td>
 </tr>
 <tr>
 <td>Windows10-2004x64.iso</td>
-<td>原生安装Windows10的2020年4月x64版本</td>
+<td>用于原生安装Windows10的2020年4月x64版本</td>
 </tr>
 <tr>
 <td>deepin-desktop-1010-amd64.iso</td>
-<td>安装DeepinOS的64位桌面版</td>
+<td>用于安装DeepinOS的64位桌面版</td>
 </tr>
 <tr>
 <td>deepin-live-system-2.0-amd64.iso</td>
@@ -316,6 +316,7 @@
 </tbody>
 </table>
 </li>
+<li>注意：列表中文件并不是全都必要，只需要放置需要的镜像即可，比如只是要安装DeepinOS，只放一个deepinv20.x的ISO镜像即可</li>
 </ul>
 <h2 id="相关文章">相关文章</h2>
 <ul>
